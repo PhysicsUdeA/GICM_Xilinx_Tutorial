@@ -16,7 +16,8 @@ entity myip_axi_leds_ctrl_v1_0_S00_AXI is
 	);
 	port (
 		-- Users to add ports here
-
+        sw_axi  : out std_logic_vector (1 downto 0);
+        led_axi : in  std_logic_vector (3 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -353,7 +354,7 @@ begin
 	    loc_addr := axi_araddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	    case loc_addr is
 	      when b"00" =>
-	        reg_data_out <= slv_reg0;
+	        reg_data_out <= x"0000000" & led_axi; --slv_reg0;
 	      when b"01" =>
 	        reg_data_out <= slv_reg1;
 	      when b"10" =>
@@ -385,7 +386,7 @@ begin
 
 
 	-- Add user logic here
-
+    sw_axi <= slv_reg0 (1 downto 0);
 	-- User logic ends
 
 end arch_imp;

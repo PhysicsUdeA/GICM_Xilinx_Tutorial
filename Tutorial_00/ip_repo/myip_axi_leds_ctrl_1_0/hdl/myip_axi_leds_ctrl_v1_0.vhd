@@ -16,7 +16,8 @@ entity myip_axi_leds_ctrl_v1_0 is
 	);
 	port (
 		-- Users to add ports here
-
+        sw_axi  : out std_logic_vector (1 downto 0);
+        led_axi : in  std_logic_vector (3 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -55,6 +56,9 @@ architecture arch_imp of myip_axi_leds_ctrl_v1_0 is
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
 		);
 		port (
+		sw_axi  : out std_logic_vector (1 downto 0);
+        led_axi : in  std_logic_vector (3 downto 0);
+        
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
 		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -88,6 +92,9 @@ myip_axi_leds_ctrl_v1_0_S00_AXI_inst : myip_axi_leds_ctrl_v1_0_S00_AXI
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
 	)
 	port map (
+	    sw_axi => sw_axi,
+        led_axi => led_axi,
+	
 		S_AXI_ACLK	=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
