@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.xpr">
+<Project Version="7" Minor="61" Path="c:/github/gicm_xilinx_tutorial/tutorial_00/ip_repo/edit_myip_axi_leds_ctrl_v1_0.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="1b461ea3e59546fcb8d944473527f5ad"/>
+    <Option Name="Id" Val="14693eec4f3944cd9e16678b5b393823"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -47,7 +47,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/myip_axi_leds_ctrl_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../GitHub/GICM_Xilinx_Tutorial/Tutorial_00/ip_repo/myip_axi_leds_ctrl_1_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -91,26 +91,31 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/leds_ctrl.vhd">
+      <File Path="$PPRDIR/../../../../GitHub/GICM_Xilinx_Tutorial/Tutorial_00/ip_repo/myip_axi_leds_ctrl_1_0/hdl/myip_axi_leds_ctrl_v1_0_S00_AXI.vhd">
         <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../GitHub/GICM_Xilinx_Tutorial/Tutorial_00/ip_repo/myip_axi_leds_ctrl_1_0/hdl/myip_axi_leds_ctrl_v1_0.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../GitHub/GICM_Xilinx_Tutorial/Tutorial_00/ip_repo/myip_axi_leds_ctrl_1_0/component.xml">
+        <FileInfo SFType="IPXACT"/>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="leds_ctrl"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="myip_axi_leds_ctrl_v1_0"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../GitHub/GICM_Xilinx_Tutorial/Tutorial_00/ip_repo/myip_axi_leds_ctrl_1_0/hdl/myip_axi_leds_ctrl_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/pynq_z1.xdc">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
@@ -118,7 +123,7 @@
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="leds_ctrl"/>
+        <Option Name="TopModule" Val="myip_axi_leds_ctrl_v1_0"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
