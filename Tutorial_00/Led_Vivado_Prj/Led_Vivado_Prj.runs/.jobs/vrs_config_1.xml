@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_Led_Ctrl_myip_axi_leds_ctrl_0_0_synth_1" LaunchDir="C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.runs/design_Led_Ctrl_myip_axi_leds_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_Led_Ctrl_processing_system7_0_0_synth_1" LaunchDir="C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.runs/design_Led_Ctrl_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_Led_Ctrl_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.runs/design_Led_Ctrl_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_Led_Ctrl_leds_ctrl_0_0_synth_1" LaunchDir="C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.runs/design_Led_Ctrl_leds_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_Led_Ctrl_auto_pc_0_synth_1" LaunchDir="C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.runs/design_Led_Ctrl_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

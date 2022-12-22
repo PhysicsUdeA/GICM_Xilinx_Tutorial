@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_Led_Ctrl/ipshared/4f3b/hdl/myip_axi_leds_ctrl_v1_0_S00_AXI.vhd" \
+"../../../bd/design_Led_Ctrl/ipshared/4f3b/hdl/myip_axi_leds_ctrl_v1_0.vhd" \
+"../../../bd/design_Led_Ctrl/ip/design_Led_Ctrl_myip_axi_leds_ctrl_0_0/sim/design_Led_Ctrl_myip_axi_leds_ctrl_0_0.vhd" \
+"../../../bd/design_Led_Ctrl/ip/design_Led_Ctrl_rst_ps7_0_100M_0/sim/design_Led_Ctrl_rst_ps7_0_100M_0.vhd" \
+"../../../bd/design_Led_Ctrl/ip/design_Led_Ctrl_leds_ctrl_0_0/sim/design_Led_Ctrl_leds_ctrl_0_0.vhd" \
+"../../../bd/design_Led_Ctrl/sim/design_Led_Ctrl.vhd" \
+
+nosort
