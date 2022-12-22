@@ -32,12 +32,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity leds_ctrl is
---  Port ( );
+  Port (sw_0  : in  std_logic_vector (1 downto 0);
+        led_0 : out std_logic_vector (3 downto 0));
 end leds_ctrl;
 
 architecture Behavioral of leds_ctrl is
 
 begin
 
+led_0 <= x"F" when sw_0 = "00" else
+         x"7" when sw_0 = "01" else
+         x"3" when sw_0 = "10" else
+         x"1";
 
 end Behavioral;
