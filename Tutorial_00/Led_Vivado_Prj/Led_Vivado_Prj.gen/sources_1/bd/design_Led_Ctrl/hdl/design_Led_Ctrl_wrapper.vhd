@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Wed Dec 21 23:53:00 2022
+--Date        : Thu Dec 22 00:02:59 2022
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target design_Led_Ctrl_wrapper.bd
 --Design      : design_Led_Ctrl_wrapper
@@ -33,7 +33,8 @@ entity design_Led_Ctrl_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    led_0 : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 end design_Led_Ctrl_wrapper;
 
@@ -60,7 +61,8 @@ architecture STRUCTURE of design_Led_Ctrl_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    led_0 : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_Led_Ctrl;
 begin
@@ -86,6 +88,7 @@ design_Led_Ctrl_i: component design_Led_Ctrl
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      led_0(3 downto 0) => led_0(3 downto 0)
     );
 end STRUCTURE;

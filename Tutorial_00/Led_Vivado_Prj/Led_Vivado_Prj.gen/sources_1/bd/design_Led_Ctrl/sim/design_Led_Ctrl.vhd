@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Wed Dec 21 23:53:00 2022
+--Date        : Thu Dec 22 00:02:59 2022
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target design_Led_Ctrl.bd
 --Design      : design_Led_Ctrl
@@ -610,7 +610,8 @@ entity design_Led_Ctrl is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    led_0 : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of design_Led_Ctrl : entity is "design_Led_Ctrl,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_Led_Ctrl,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
@@ -735,6 +736,8 @@ architecture STRUCTURE of design_Led_Ctrl is
     s00_axi_rready : in STD_LOGIC
   );
   end component design_Led_Ctrl_myip_axi_leds_ctrl_0_0;
+  signal leds_ctrl_0_led_0 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal myip_axi_leds_ctrl_0_sw_axi : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -816,8 +819,6 @@ architecture STRUCTURE of design_Led_Ctrl is
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_leds_ctrl_0_led_0_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_myip_axi_leds_ctrl_0_sw_axi_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -850,14 +851,15 @@ architecture STRUCTURE of design_Led_Ctrl is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
+  led_0(3 downto 0) <= leds_ctrl_0_led_0(3 downto 0);
 leds_ctrl_0: component design_Led_Ctrl_leds_ctrl_0_0
      port map (
-      led_0(3 downto 0) => NLW_leds_ctrl_0_led_0_UNCONNECTED(3 downto 0),
-      sw_0(1 downto 0) => B"00"
+      led_0(3 downto 0) => leds_ctrl_0_led_0(3 downto 0),
+      sw_0(1 downto 0) => myip_axi_leds_ctrl_0_sw_axi(1 downto 0)
     );
 myip_axi_leds_ctrl_0: component design_Led_Ctrl_myip_axi_leds_ctrl_0_0
      port map (
-      led_axi(3 downto 0) => B"0000",
+      led_axi(3 downto 0) => leds_ctrl_0_led_0(3 downto 0),
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -879,7 +881,7 @@ myip_axi_leds_ctrl_0: component design_Led_Ctrl_myip_axi_leds_ctrl_0_0
       s00_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
-      sw_axi(1 downto 0) => NLW_myip_axi_leds_ctrl_0_sw_axi_UNCONNECTED(1 downto 0)
+      sw_axi(1 downto 0) => myip_axi_leds_ctrl_0_sw_axi(1 downto 0)
     );
 processing_system7_0: component design_Led_Ctrl_processing_system7_0_0
      port map (

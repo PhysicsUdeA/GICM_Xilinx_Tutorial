@@ -80,6 +80,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.cache/wt [current_project]
 set_property parent.project_path C:/GitHub/GICM_Xilinx_Tutorial/Tutorial_00/Led_Vivado_Prj/Led_Vivado_Prj.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
