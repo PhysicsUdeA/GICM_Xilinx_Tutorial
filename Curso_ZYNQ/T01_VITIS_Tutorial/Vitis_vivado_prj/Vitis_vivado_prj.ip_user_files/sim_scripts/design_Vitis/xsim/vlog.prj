@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ec67/hdl" --include "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ee60/hdl" \
+"../../../bd/design_Vitis/ip/design_Vitis_processing_system7_0_0/sim/design_Vitis_processing_system7_0_0.v" \
+"../../../bd/design_Vitis/ip/design_Vitis_auto_pc_0/sim/design_Vitis_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
