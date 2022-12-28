@@ -11,3 +11,8 @@
 - https://docs.xilinx.com/v/u/3.0-English/pg091-xadc-wiz
 
 - https://docs.xilinx.com/r/en-US/ug480_7Series_XADC
+
+
+## PYNQ-Z1 repository
+
+- https://github.com/Xilinx/PYNQ
