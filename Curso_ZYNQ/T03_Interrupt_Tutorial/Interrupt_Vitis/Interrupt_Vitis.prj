@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Interrupt_Vitis" location="C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T03_Interrupt_Tutorial/Interrupt_Vitis" platform="C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T03_Interrupt_Tutorial/design_Interrupt_wrapper/export/design_Interrupt_wrapper/design_Interrupt_wrapper.xpfm" platformUID="xilinx:pynq-z1::0.0(custom)" systemProject="Interrupt_Vitis_system" sysConfig="design_Interrupt_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="d6f29f30e5df3845b5879788691cd5ed">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.2108635500">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1890552489" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
