@@ -65,20 +65,34 @@ COMPONENT xadc_wiz_0
 END COMPONENT;
 
 -- FIR Filter component
-component FIR_sample is
-    Port ( clk : in STD_LOGIC;
-           data_in : in STD_LOGIC_VECTOR (11 downto 0);
-           data_out : out STD_LOGIC_VECTOR (11 downto 0);
-           en : in STD_LOGIC);
-end component;
+COMPONENT fir_compiler_0
+  PORT (
+    aclk : IN STD_LOGIC;
+    s_axis_data_tvalid : IN STD_LOGIC;
+    s_axis_data_tready : OUT STD_LOGIC;
+    s_axis_data_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    m_axis_data_tvalid : OUT STD_LOGIC;
+    m_axis_data_tdata : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) 
+  );
+END COMPONENT;
 
-    signal channel_out : std_logic_vector(4 downto 0);
-    signal daddr_in    : std_logic_vector(6 downto 0);
-    signal eoc_out     : std_logic;
-    signal do_out      : std_logic_vector(15 downto 0);
+---- Moving Average component
+--component FIR_sample is
+--    Port ( clk : in STD_LOGIC;
+--           data_in : in STD_LOGIC_VECTOR (11 downto 0);
+--           data_out : out STD_LOGIC_VECTOR (11 downto 0);
+--           en : in STD_LOGIC);
+--end component;
+
+    signal channel_out   : std_logic_vector(4 downto 0);
+    signal daddr_in      : std_logic_vector(6 downto 0);
+    signal eoc_out, strb : std_logic;
+    signal do_out        : std_logic_vector(15 downto 0);
     signal anal_p, anal_n, convst, drdy : std_logic;
-    signal count       : integer range 0 to 999;
-    signal x, y        : std_logic_vector(11 downto 0);
+    signal count         : integer range 0 to 999;
+    signal y             : std_logic_vector(7 downto 0);
+    signal x             : std_logic_vector(11 downto 0);
+    signal x_16bits      : std_logic_vector(15 downto 0);
     
 begin
 
@@ -86,14 +100,13 @@ begin
     anal_p <= JA(0);
     anal_n <= JA(1);
 
-your_fir_sample : FIR_sample
-  PORT MAP (
-    clk => clk,
-    data_in => x,
-    data_out => y,
-    en => eoc_out
-  );
-  
+--your_fir_sample : FIR_sample
+--  PORT MAP (
+--    clk => clk,
+--    data_in => x,
+--    data_out => y,
+--    en => eoc_out
+--  );
 
 your_xadc : xadc_wiz_0
   PORT MAP (
@@ -117,10 +130,30 @@ your_xadc : xadc_wiz_0
     busy_out => open
   );
   
+your_filter : fir_compiler_0
+  PORT MAP (
+    aclk => clk,
+    s_axis_data_tvalid => eoc_out,
+    s_axis_data_tready => open,
+    s_axis_data_tdata => x_16bits,
+    m_axis_data_tvalid => strb,
+    m_axis_data_tdata => y
+  );
+  
   -- mapping connections
   x <= not(do_out(15)) & do_out (14 downto 4);
-  JB <= not(y(11)) & y(10 downto 4);
-  leds <= y(7 downto 4);
+  x_16bits <= "0000" & x;
+  
+-- filtering
+process (clk)
+begin
+    if clk'event and clk='1' then
+        if strb = '1' then
+            JB <= not(y(7)) & y(6 downto 0);
+            leds <= y(5 downto 2);
+        end if;
+    end if;
+end process;  
   
 -- creation of process 1 khz convertion rate
 process (clk)
