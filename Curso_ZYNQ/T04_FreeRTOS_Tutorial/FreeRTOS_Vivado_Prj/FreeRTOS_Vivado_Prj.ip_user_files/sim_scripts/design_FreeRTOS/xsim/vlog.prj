@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../FreeRTOS_Vivado_Prj.gen/sources_1/bd/design_FreeRTOS/ipshared/ec67/hdl" --include "../../../../FreeRTOS_Vivado_Prj.gen/sources_1/bd/design_FreeRTOS/ipshared/ee60/hdl" \
+"../../../bd/design_FreeRTOS/ip/design_FreeRTOS_processing_system7_0_0/sim/design_FreeRTOS_processing_system7_0_0.v" \
+"../../../bd/design_FreeRTOS/ip/design_FreeRTOS_auto_pc_0/sim/design_FreeRTOS_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
