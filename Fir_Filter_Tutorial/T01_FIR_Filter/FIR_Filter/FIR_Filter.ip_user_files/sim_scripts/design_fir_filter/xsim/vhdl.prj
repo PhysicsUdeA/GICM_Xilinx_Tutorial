@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_fir_filter/sim/design_fir_filter.vhd" \
+
+nosort
