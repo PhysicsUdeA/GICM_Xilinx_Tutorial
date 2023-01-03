@@ -169,12 +169,12 @@ entity design_Vitis_xadc_wiz_0_0_xadc_core_drp is
      ---------------- interrupt interface with the system  -----------
      Interrupt_status       : out std_logic_vector(0 to IP_INTR_NUM-1);
      ----------------  sysmon macro interface  -------------------
+     vauxp1                 : in  STD_LOGIC;                         -- Auxiliary Channel 1
+     vauxn1                 : in  STD_LOGIC;
      vauxp6                 : in  STD_LOGIC;                         -- Auxiliary Channel 6
      vauxn6                 : in  STD_LOGIC;
-     vauxp7                 : in  STD_LOGIC;                         -- Auxiliary Channel 7
-     vauxn7                 : in  STD_LOGIC;
-     vauxp14                : in  STD_LOGIC;                         -- Auxiliary Channel 14
-     vauxn14                : in  STD_LOGIC;
+     vauxp9                 : in  STD_LOGIC;                         -- Auxiliary Channel 9
+     vauxn9                 : in  STD_LOGIC;
      vauxp15                : in  STD_LOGIC;                         -- Auxiliary Channel 15
      vauxn15                : in  STD_LOGIC;
      busy_out               : out  STD_LOGIC;                        -- ADC Busy signal
@@ -926,8 +926,8 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
         aux_channel_p(0) <= '0';
         aux_channel_n(0) <= '0';
 
-        aux_channel_p(1) <= '0';
-        aux_channel_n(1) <= '0';
+        aux_channel_p(1) <= vauxp1;
+        aux_channel_n(1) <= vauxn1;
 
         aux_channel_p(2) <= '0';
         aux_channel_n(2) <= '0';
@@ -944,14 +944,14 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
         aux_channel_p(6) <= vauxp6;
         aux_channel_n(6) <= vauxn6;
 
-        aux_channel_p(7) <= vauxp7;
-        aux_channel_n(7) <= vauxn7;
+        aux_channel_p(7) <= '0';
+        aux_channel_n(7) <= '0';
 
         aux_channel_p(8) <= '0';
         aux_channel_n(8) <= '0';
 
-        aux_channel_p(9) <= '0';
-        aux_channel_n(9) <= '0';
+        aux_channel_p(9) <= vauxp9;
+        aux_channel_n(9) <= vauxn9;
 
         aux_channel_p(10) <= '0';
         aux_channel_n(10) <= '0';
@@ -965,8 +965,8 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
         aux_channel_p(13) <= '0';
         aux_channel_n(13) <= '0';
 
-        aux_channel_p(14) <= vauxp14;
-        aux_channel_n(14) <= vauxn14;
+        aux_channel_p(14) <= '0';
+        aux_channel_n(14) <= '0';
 
         aux_channel_p(15) <= vauxp15;
         aux_channel_n(15) <= vauxn15;
@@ -977,9 +977,9 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
         INIT_41 => X"21AF", -- config reg 1
         INIT_42 => X"0400", -- config reg 2
         INIT_48 => X"0800", -- Sequencer channel selection
-        INIT_49 => X"C0C0", -- Sequencer channel selection
+        INIT_49 => X"8242", -- Sequencer channel selection
         INIT_4A => X"0800", -- Sequencer Average selection
-        INIT_4B => X"C0C0", -- Sequencer Average selection
+        INIT_4B => X"8242", -- Sequencer Average selection
         INIT_4C => X"0000", -- Sequencer Bipolar selection
         INIT_4D => X"0000", -- Sequencer Bipolar selection
         INIT_4E => X"0000", -- Sequencer Acq time selection

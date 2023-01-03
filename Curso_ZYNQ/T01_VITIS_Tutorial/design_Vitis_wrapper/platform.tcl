@@ -24,3 +24,8 @@ platform clean
 platform clean
 platform clean
 platform clean
+platform active {design_Vitis_wrapper}
+platform config -updatehw {C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T01_VITIS_Tutorial/Vitis_vivado_prj/design_Vitis_wrapper.xsa}
+platform generate
+platform clean
+platform generate

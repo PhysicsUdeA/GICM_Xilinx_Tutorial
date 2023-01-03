@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Tue Dec 27 17:09:43 2022
+// Date        : Mon Jan  2 22:05:54 2023
 // Host        : fabiancastano running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T01_VITIS_Tutorial/Vitis_vivado_prj/Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ip/design_Vitis_xadc_wiz_0_0/design_Vitis_xadc_wiz_0_0_sim_netlist.v
@@ -34,12 +34,12 @@ module design_Vitis_xadc_wiz_0_0
     s_axi_rvalid,
     s_axi_rready,
     ip2intc_irpt,
+    vauxp1,
+    vauxn1,
     vauxp6,
     vauxn6,
-    vauxp7,
-    vauxn7,
-    vauxp14,
-    vauxn14,
+    vauxp9,
+    vauxn9,
     vauxp15,
     vauxn15,
     busy_out,
@@ -69,12 +69,12 @@ module design_Vitis_xadc_wiz_0_0
   output s_axi_rvalid;
   input s_axi_rready;
   output ip2intc_irpt;
+  input vauxp1;
+  input vauxn1;
   input vauxp6;
   input vauxn6;
-  input vauxp7;
-  input vauxn7;
-  input vauxp14;
-  input vauxn14;
+  input vauxp9;
+  input vauxn9;
   input vauxp15;
   input vauxn15;
   output busy_out;
@@ -111,14 +111,14 @@ module design_Vitis_xadc_wiz_0_0
   wire s_axi_wready;
   wire [3:0]s_axi_wstrb;
   wire s_axi_wvalid;
-  wire vauxn14;
+  wire vauxn1;
   wire vauxn15;
   wire vauxn6;
-  wire vauxn7;
-  wire vauxp14;
+  wire vauxn9;
+  wire vauxp1;
   wire vauxp15;
   wire vauxp6;
-  wire vauxp7;
+  wire vauxp9;
   wire vn_in;
   wire vp_in;
   wire [6:0]NLW_U0_alarm_out_UNCONNECTED;
@@ -182,14 +182,14 @@ module design_Vitis_xadc_wiz_0_0
         .s_axi_wready(s_axi_wready),
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid),
-        .vauxn14(vauxn14),
+        .vauxn1(vauxn1),
         .vauxn15(vauxn15),
         .vauxn6(vauxn6),
-        .vauxn7(vauxn7),
-        .vauxp14(vauxp14),
+        .vauxn9(vauxn9),
+        .vauxp1(vauxp1),
         .vauxp15(vauxp15),
         .vauxp6(vauxp6),
-        .vauxp7(vauxp7),
+        .vauxp9(vauxp9),
         .vn_in(vn_in),
         .vp_in(vp_in));
 endmodule
@@ -2156,12 +2156,12 @@ module design_Vitis_xadc_wiz_0_0_axi_xadc
     s_axi_rvalid,
     s_axi_rready,
     ip2intc_irpt,
+    vauxp1,
+    vauxn1,
     vauxp6,
     vauxn6,
-    vauxp7,
-    vauxn7,
-    vauxp14,
-    vauxn14,
+    vauxp9,
+    vauxn9,
     vauxp15,
     vauxn15,
     busy_out,
@@ -2191,12 +2191,12 @@ module design_Vitis_xadc_wiz_0_0_axi_xadc
   output s_axi_rvalid;
   input s_axi_rready;
   (* sigis = "INTR_LEVEL_HIGH" *) output ip2intc_irpt;
+  input vauxp1;
+  input vauxn1;
   input vauxp6;
   input vauxn6;
-  input vauxp7;
-  input vauxn7;
-  input vauxp14;
-  input vauxn14;
+  input vauxp9;
+  input vauxn9;
   input vauxp15;
   input vauxn15;
   output busy_out;
@@ -2357,14 +2357,14 @@ module design_Vitis_xadc_wiz_0_0_axi_xadc
   wire status_reg_rdack_d1;
   wire sw_rst_cond;
   wire sw_rst_cond_d1;
-  wire vauxn14;
+  wire vauxn1;
   wire vauxn15;
   wire vauxn6;
-  wire vauxn7;
-  wire vauxp14;
+  wire vauxn9;
+  wire vauxp1;
   wire vauxp15;
   wire vauxp6;
-  wire vauxp7;
+  wire vauxp9;
   wire vn_in;
   wire vp_in;
   wire wrack;
@@ -2508,8 +2508,8 @@ module design_Vitis_xadc_wiz_0_0_axi_xadc
         .\INTR_CTRLR_GEN_I.ip2bus_error_reg (AXI_LITE_IPIF_I_n_42),
         .\INTR_CTRLR_GEN_I.ip2bus_error_reg_0 (\INTR_CTRLR_GEN_I.ip2bus_error_i_3_n_0 ),
         .Q({\^alarm_out ,AXI_XADC_CORE_I_n_29,AXI_XADC_CORE_I_n_30,AXI_XADC_CORE_I_n_31,AXI_XADC_CORE_I_n_32,AXI_XADC_CORE_I_n_33,AXI_XADC_CORE_I_n_34,AXI_XADC_CORE_I_n_35,alarm_reg}),
-        .VAUXN({vauxn15,vauxn14,vauxn7,vauxn6}),
-        .VAUXP({vauxp15,vauxp14,vauxp7,vauxp6}),
+        .VAUXN({vauxn15,vauxn9,vauxn6,vauxn1}),
+        .VAUXP({vauxp15,vauxp9,vauxp6,vauxp1}),
         .XADC_INST_0({p_1_in_0,p_2_in,p_3_in,p_4_in,p_5_in,p_6_in,AXI_XADC_CORE_I_n_16,ot_i}),
         .XADC_INST_1(bus2ip_addr),
         .XADC_INST_2(AXI_LITE_IPIF_I_n_0),
@@ -5244,9 +5244,9 @@ module design_Vitis_xadc_wiz_0_0_xadc_core_drp
     .INIT_46(16'h0000),
     .INIT_47(16'h0000),
     .INIT_48(16'h0800),
-    .INIT_49(16'hC0C0),
+    .INIT_49(16'h8242),
     .INIT_4A(16'h0800),
-    .INIT_4B(16'hC0C0),
+    .INIT_4B(16'h8242),
     .INIT_4C(16'h0000),
     .INIT_4D(16'h0000),
     .INIT_4E(16'h0000),
@@ -5292,8 +5292,8 @@ module design_Vitis_xadc_wiz_0_0_xadc_core_drp
         .MUXADDR(NLW_XADC_INST_MUXADDR_UNCONNECTED[4:0]),
         .OT(XADC_INST_0[0]),
         .RESET(RESET),
-        .VAUXN({VAUXN[3:2],1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,VAUXN[1:0],1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .VAUXP({VAUXP[3:2],1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,VAUXP[1:0],1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .VAUXN({VAUXN[3],1'b0,1'b0,1'b0,1'b0,1'b0,VAUXN[2],1'b0,1'b0,VAUXN[1],1'b0,1'b0,1'b0,1'b0,VAUXN[0],1'b0}),
+        .VAUXP({VAUXP[3],1'b0,1'b0,1'b0,1'b0,1'b0,VAUXP[2],1'b0,1'b0,VAUXP[1],1'b0,1'b0,1'b0,1'b0,VAUXP[0],1'b0}),
         .VN(vn_in),
         .VP(vp_in));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 

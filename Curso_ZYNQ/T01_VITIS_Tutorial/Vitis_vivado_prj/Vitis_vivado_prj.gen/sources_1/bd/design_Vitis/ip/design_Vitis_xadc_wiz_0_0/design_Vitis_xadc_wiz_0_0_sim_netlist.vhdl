@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Tue Dec 27 17:09:43 2022
+-- Date        : Mon Jan  2 22:05:54 2023
 -- Host        : fabiancastano running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T01_VITIS_Tutorial/Vitis_vivado_prj/Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ip/design_Vitis_xadc_wiz_0_0/design_Vitis_xadc_wiz_0_0_sim_netlist.vhdl
@@ -3471,9 +3471,9 @@ XADC_INST: unisim.vcomponents.XADC
       INIT_46 => X"0000",
       INIT_47 => X"0000",
       INIT_48 => X"0800",
-      INIT_49 => X"C0C0",
+      INIT_49 => X"8242",
       INIT_4A => X"0800",
-      INIT_4B => X"C0C0",
+      INIT_4B => X"8242",
       INIT_4C => X"0000",
       INIT_4D => X"0000",
       INIT_4E => X"0000",
@@ -3523,14 +3523,22 @@ XADC_INST: unisim.vcomponents.XADC
       MUXADDR(4 downto 0) => NLW_XADC_INST_MUXADDR_UNCONNECTED(4 downto 0),
       OT => \^xadc_inst_0\(0),
       RESET => RESET,
-      VAUXN(15 downto 14) => VAUXN(3 downto 2),
-      VAUXN(13 downto 8) => B"000000",
-      VAUXN(7 downto 6) => VAUXN(1 downto 0),
-      VAUXN(5 downto 0) => B"000000",
-      VAUXP(15 downto 14) => VAUXP(3 downto 2),
-      VAUXP(13 downto 8) => B"000000",
-      VAUXP(7 downto 6) => VAUXP(1 downto 0),
-      VAUXP(5 downto 0) => B"000000",
+      VAUXN(15) => VAUXN(3),
+      VAUXN(14 downto 10) => B"00000",
+      VAUXN(9) => VAUXN(2),
+      VAUXN(8 downto 7) => B"00",
+      VAUXN(6) => VAUXN(1),
+      VAUXN(5 downto 2) => B"0000",
+      VAUXN(1) => VAUXN(0),
+      VAUXN(0) => '0',
+      VAUXP(15) => VAUXP(3),
+      VAUXP(14 downto 10) => B"00000",
+      VAUXP(9) => VAUXP(2),
+      VAUXP(8 downto 7) => B"00",
+      VAUXP(6) => VAUXP(1),
+      VAUXP(5 downto 2) => B"0000",
+      VAUXP(1) => VAUXP(0),
+      VAUXP(0) => '0',
       VN => vn_in,
       VP => vp_in
     );
@@ -5267,12 +5275,12 @@ entity design_Vitis_xadc_wiz_0_0_axi_xadc is
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     ip2intc_irpt : out STD_LOGIC;
+    vauxp1 : in STD_LOGIC;
+    vauxn1 : in STD_LOGIC;
     vauxp6 : in STD_LOGIC;
     vauxn6 : in STD_LOGIC;
-    vauxp7 : in STD_LOGIC;
-    vauxn7 : in STD_LOGIC;
-    vauxp14 : in STD_LOGIC;
-    vauxn14 : in STD_LOGIC;
+    vauxp9 : in STD_LOGIC;
+    vauxn9 : in STD_LOGIC;
     vauxp15 : in STD_LOGIC;
     vauxn15 : in STD_LOGIC;
     busy_out : out STD_LOGIC;
@@ -5645,13 +5653,13 @@ AXI_XADC_CORE_I: entity work.design_Vitis_xadc_wiz_0_0_xadc_core_drp
       Q(1) => AXI_XADC_CORE_I_n_35,
       Q(0) => alarm_reg(0),
       VAUXN(3) => vauxn15,
-      VAUXN(2) => vauxn14,
-      VAUXN(1) => vauxn7,
-      VAUXN(0) => vauxn6,
+      VAUXN(2) => vauxn9,
+      VAUXN(1) => vauxn6,
+      VAUXN(0) => vauxn1,
       VAUXP(3) => vauxp15,
-      VAUXP(2) => vauxp14,
-      VAUXP(1) => vauxp7,
-      VAUXP(0) => vauxp6,
+      VAUXP(2) => vauxp9,
+      VAUXP(1) => vauxp6,
+      VAUXP(0) => vauxp1,
       XADC_INST_0(7) => p_1_in_0,
       XADC_INST_0(6) => p_2_in,
       XADC_INST_0(5) => p_3_in,
@@ -6144,12 +6152,12 @@ entity design_Vitis_xadc_wiz_0_0 is
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     ip2intc_irpt : out STD_LOGIC;
+    vauxp1 : in STD_LOGIC;
+    vauxn1 : in STD_LOGIC;
     vauxp6 : in STD_LOGIC;
     vauxn6 : in STD_LOGIC;
-    vauxp7 : in STD_LOGIC;
-    vauxn7 : in STD_LOGIC;
-    vauxp14 : in STD_LOGIC;
-    vauxn14 : in STD_LOGIC;
+    vauxp9 : in STD_LOGIC;
+    vauxn9 : in STD_LOGIC;
     vauxp15 : in STD_LOGIC;
     vauxn15 : in STD_LOGIC;
     busy_out : out STD_LOGIC;
@@ -6253,14 +6261,14 @@ U0: entity work.design_Vitis_xadc_wiz_0_0_axi_xadc
       s_axi_wready => s_axi_wready,
       s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
       s_axi_wvalid => s_axi_wvalid,
-      vauxn14 => vauxn14,
+      vauxn1 => vauxn1,
       vauxn15 => vauxn15,
       vauxn6 => vauxn6,
-      vauxn7 => vauxn7,
-      vauxp14 => vauxp14,
+      vauxn9 => vauxn9,
+      vauxp1 => vauxp1,
       vauxp15 => vauxp15,
       vauxp6 => vauxp6,
-      vauxp7 => vauxp7,
+      vauxp9 => vauxp9,
       vn_in => vn_in,
       vp_in => vp_in
     );

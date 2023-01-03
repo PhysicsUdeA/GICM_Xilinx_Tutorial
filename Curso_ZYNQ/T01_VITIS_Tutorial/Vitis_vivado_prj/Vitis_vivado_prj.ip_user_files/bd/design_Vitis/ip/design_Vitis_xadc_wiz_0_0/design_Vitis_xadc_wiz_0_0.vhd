@@ -83,12 +83,12 @@ entity design_Vitis_xadc_wiz_0_0 is
                                                                                 
    -- Input to the system from the axi_xadc core
     ip2intc_irpt    : out std_logic;
+    vauxp1          : in  STD_LOGIC;                         -- Auxiliary Channel 1
+    vauxn1          : in  STD_LOGIC;
     vauxp6          : in  STD_LOGIC;                         -- Auxiliary Channel 6
     vauxn6          : in  STD_LOGIC;
-    vauxp7          : in  STD_LOGIC;                         -- Auxiliary Channel 7
-    vauxn7          : in  STD_LOGIC;
-    vauxp14         : in  STD_LOGIC;                         -- Auxiliary Channel 14
-    vauxn14         : in  STD_LOGIC;
+    vauxp9          : in  STD_LOGIC;                         -- Auxiliary Channel 9
+    vauxn9          : in  STD_LOGIC;
     vauxp15         : in  STD_LOGIC;                         -- Auxiliary Channel 15
     vauxn15         : in  STD_LOGIC;
     busy_out        : out  STD_LOGIC;                        -- ADC Busy signal
@@ -157,12 +157,12 @@ architecture xilinx of design_Vitis_xadc_wiz_0_0 is
    -- XADC External interface signals
 
     -- Conversion start control signal for Event driven mode
+    vauxp1          : in  STD_LOGIC;                         -- Auxiliary Channel 1
+    vauxn1          : in  STD_LOGIC;
     vauxp6          : in  STD_LOGIC;                         -- Auxiliary Channel 6
     vauxn6          : in  STD_LOGIC;
-    vauxp7          : in  STD_LOGIC;                         -- Auxiliary Channel 7
-    vauxn7          : in  STD_LOGIC;
-    vauxp14         : in  STD_LOGIC;                         -- Auxiliary Channel 14
-    vauxn14         : in  STD_LOGIC;
+    vauxp9          : in  STD_LOGIC;                         -- Auxiliary Channel 9
+    vauxn9          : in  STD_LOGIC;
     vauxp15         : in  STD_LOGIC;                         -- Auxiliary Channel 15
     vauxn15         : in  STD_LOGIC;
     busy_out        : out  STD_LOGIC;                        -- ADC Busy signal
@@ -213,12 +213,12 @@ begin
     s_axi_rvalid    => s_axi_rvalid,                    
     s_axi_rready    => s_axi_rready,                    
     ip2intc_irpt    => ip2intc_irpt,  
+    vauxp1 => vauxp1,
+    vauxn1 => vauxn1,
     vauxp6 => vauxp6,
     vauxn6 => vauxn6,
-    vauxp7 => vauxp7,
-    vauxn7 => vauxn7,
-    vauxp14 => vauxp14,
-    vauxn14 => vauxn14,
+    vauxp9 => vauxp9,
+    vauxn9 => vauxn9,
     vauxp15 => vauxp15,
     vauxn15 => vauxn15,
     busy_out => busy_out,

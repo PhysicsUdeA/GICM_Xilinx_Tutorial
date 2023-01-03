@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7842E4CCD850FC24",
+      "boundary_crc": "0x6FB97CAB915AB4AB",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis",
       "name": "design_Vitis",
@@ -191,12 +191,6 @@
       }
     },
     "ports": {
-      "vauxp14_0": {
-        "direction": "I"
-      },
-      "vauxn14_0": {
-        "direction": "I"
-      },
       "vn_in_0": {
         "direction": "I"
       },
@@ -206,12 +200,6 @@
       "vauxn6_0": {
         "direction": "I"
       },
-      "vauxp7_0": {
-        "direction": "I"
-      },
-      "vauxn7_0": {
-        "direction": "I"
-      },
       "vp_in_0": {
         "direction": "I"
       },
@@ -219,6 +207,18 @@
         "direction": "I"
       },
       "vauxp15_0": {
+        "direction": "I"
+      },
+      "vauxn9_0": {
+        "direction": "I"
+      },
+      "vauxp1_0": {
+        "direction": "I"
+      },
+      "vauxn1_0": {
+        "direction": "I"
+      },
+      "vauxp9_0": {
         "direction": "I"
       }
     },
@@ -230,15 +230,21 @@
         "inst_hier_path": "xadc_wiz_0",
         "parameters": {
           "AVERAGE_ENABLE_VAUXP14_VAUXN14": {
-            "value": "true"
+            "value": "false"
           },
           "AVERAGE_ENABLE_VAUXP15_VAUXN15": {
+            "value": "true"
+          },
+          "AVERAGE_ENABLE_VAUXP1_VAUXN1": {
             "value": "true"
           },
           "AVERAGE_ENABLE_VAUXP6_VAUXN6": {
             "value": "true"
           },
           "AVERAGE_ENABLE_VAUXP7_VAUXN7": {
+            "value": "false"
+          },
+          "AVERAGE_ENABLE_VAUXP9_VAUXN9": {
             "value": "true"
           },
           "AVERAGE_ENABLE_VP_VN": {
@@ -248,15 +254,21 @@
             "value": "16"
           },
           "CHANNEL_ENABLE_VAUXP14_VAUXN14": {
-            "value": "true"
+            "value": "false"
           },
           "CHANNEL_ENABLE_VAUXP15_VAUXN15": {
+            "value": "true"
+          },
+          "CHANNEL_ENABLE_VAUXP1_VAUXN1": {
             "value": "true"
           },
           "CHANNEL_ENABLE_VAUXP6_VAUXN6": {
             "value": "true"
           },
           "CHANNEL_ENABLE_VAUXP7_VAUXN7": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP9_VAUXN9": {
             "value": "true"
           },
           "CHANNEL_ENABLE_VP_VN": {
@@ -2286,16 +2298,16 @@
           "ps7_0_axi_periph/ARESETN"
         ]
       },
-      "vauxn14_0_1": {
-        "ports": [
-          "vauxn14_0",
-          "xadc_wiz_0/vauxn14"
-        ]
-      },
       "vauxn15_0_1": {
         "ports": [
           "vauxn15_0",
           "xadc_wiz_0/vauxn15"
+        ]
+      },
+      "vauxn1_0_1": {
+        "ports": [
+          "vauxn1_0",
+          "xadc_wiz_0/vauxn1"
         ]
       },
       "vauxn6_0_1": {
@@ -2304,16 +2316,10 @@
           "xadc_wiz_0/vauxn6"
         ]
       },
-      "vauxn7_0_1": {
+      "vauxn9_0_1": {
         "ports": [
-          "vauxn7_0",
-          "xadc_wiz_0/vauxn7"
-        ]
-      },
-      "vauxp14_0_1": {
-        "ports": [
-          "vauxp14_0",
-          "xadc_wiz_0/vauxp14"
+          "vauxn9_0",
+          "xadc_wiz_0/vauxn9"
         ]
       },
       "vauxp15_0_1": {
@@ -2322,16 +2328,22 @@
           "xadc_wiz_0/vauxp15"
         ]
       },
+      "vauxp1_0_1": {
+        "ports": [
+          "vauxp1_0",
+          "xadc_wiz_0/vauxp1"
+        ]
+      },
       "vauxp6_0_1": {
         "ports": [
           "vauxp6_0",
           "xadc_wiz_0/vauxp6"
         ]
       },
-      "vauxp7_0_1": {
+      "vauxp9_0_1": {
         "ports": [
-          "vauxp7_0",
-          "xadc_wiz_0/vauxp7"
+          "vauxp9_0",
+          "xadc_wiz_0/vauxp9"
         ]
       },
       "vn_in_0_1": {

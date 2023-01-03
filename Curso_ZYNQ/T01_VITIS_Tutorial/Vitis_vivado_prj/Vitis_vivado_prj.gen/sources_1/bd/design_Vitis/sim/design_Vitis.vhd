@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Tue Dec 27 17:08:44 2022
+--Date        : Mon Jan  2 22:05:00 2023
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target design_Vitis.bd
 --Design      : design_Vitis
@@ -599,14 +599,14 @@ entity design_Vitis is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    vauxn14_0 : in STD_LOGIC;
     vauxn15_0 : in STD_LOGIC;
+    vauxn1_0 : in STD_LOGIC;
     vauxn6_0 : in STD_LOGIC;
-    vauxn7_0 : in STD_LOGIC;
-    vauxp14_0 : in STD_LOGIC;
+    vauxn9_0 : in STD_LOGIC;
     vauxp15_0 : in STD_LOGIC;
+    vauxp1_0 : in STD_LOGIC;
     vauxp6_0 : in STD_LOGIC;
-    vauxp7_0 : in STD_LOGIC;
+    vauxp9_0 : in STD_LOGIC;
     vn_in_0 : in STD_LOGIC;
     vp_in_0 : in STD_LOGIC
   );
@@ -641,12 +641,12 @@ architecture STRUCTURE of design_Vitis is
     ip2intc_irpt : out STD_LOGIC;
     vp_in : in STD_LOGIC;
     vn_in : in STD_LOGIC;
+    vauxp1 : in STD_LOGIC;
+    vauxn1 : in STD_LOGIC;
     vauxp6 : in STD_LOGIC;
     vauxn6 : in STD_LOGIC;
-    vauxp7 : in STD_LOGIC;
-    vauxn7 : in STD_LOGIC;
-    vauxp14 : in STD_LOGIC;
-    vauxn14 : in STD_LOGIC;
+    vauxp9 : in STD_LOGIC;
+    vauxn9 : in STD_LOGIC;
     vauxp15 : in STD_LOGIC;
     vauxn15 : in STD_LOGIC;
     channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -818,14 +818,14 @@ architecture STRUCTURE of design_Vitis is
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal vauxn14_0_1 : STD_LOGIC;
   signal vauxn15_0_1 : STD_LOGIC;
+  signal vauxn1_0_1 : STD_LOGIC;
   signal vauxn6_0_1 : STD_LOGIC;
-  signal vauxn7_0_1 : STD_LOGIC;
-  signal vauxp14_0_1 : STD_LOGIC;
+  signal vauxn9_0_1 : STD_LOGIC;
   signal vauxp15_0_1 : STD_LOGIC;
+  signal vauxp1_0_1 : STD_LOGIC;
   signal vauxp6_0_1 : STD_LOGIC;
-  signal vauxp7_0_1 : STD_LOGIC;
+  signal vauxp9_0_1 : STD_LOGIC;
   signal vn_in_0_1 : STD_LOGIC;
   signal vp_in_0_1 : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
@@ -866,14 +866,14 @@ architecture STRUCTURE of design_Vitis is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
-  vauxn14_0_1 <= vauxn14_0;
   vauxn15_0_1 <= vauxn15_0;
+  vauxn1_0_1 <= vauxn1_0;
   vauxn6_0_1 <= vauxn6_0;
-  vauxn7_0_1 <= vauxn7_0;
-  vauxp14_0_1 <= vauxp14_0;
+  vauxn9_0_1 <= vauxn9_0;
   vauxp15_0_1 <= vauxp15_0;
+  vauxp1_0_1 <= vauxp1_0;
   vauxp6_0_1 <= vauxp6_0;
-  vauxp7_0_1 <= vauxp7_0;
+  vauxp9_0_1 <= vauxp9_0;
   vn_in_0_1 <= vn_in_0;
   vp_in_0_1 <= vp_in_0;
 processing_system7_0: component design_Vitis_processing_system7_0_0
@@ -1048,14 +1048,14 @@ xadc_wiz_0: component design_Vitis_xadc_wiz_0_0
       s_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
-      vauxn14 => vauxn14_0_1,
+      vauxn1 => vauxn1_0_1,
       vauxn15 => vauxn15_0_1,
       vauxn6 => vauxn6_0_1,
-      vauxn7 => vauxn7_0_1,
-      vauxp14 => vauxp14_0_1,
+      vauxn9 => vauxn9_0_1,
+      vauxp1 => vauxp1_0_1,
       vauxp15 => vauxp15_0_1,
       vauxp6 => vauxp6_0_1,
-      vauxp7 => vauxp7_0_1,
+      vauxp9 => vauxp9_0_1,
       vn_in => vn_in_0_1,
       vp_in => vp_in_0_1
     );

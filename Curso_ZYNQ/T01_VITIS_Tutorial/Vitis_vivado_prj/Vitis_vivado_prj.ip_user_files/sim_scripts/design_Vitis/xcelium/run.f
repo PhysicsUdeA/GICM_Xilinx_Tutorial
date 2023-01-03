@@ -44,6 +44,16 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_Vitis/ip/design_Vitis_processing_system7_0_0/sim/design_Vitis_processing_system7_0_0.v" \
 -endlib
+-makelib xcelium_lib/lib_cdc_v1_0_2 \
+  "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/proc_sys_reset_v5_0_13 \
+  "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_Vitis/ip/design_Vitis_rst_ps7_0_100M_0/sim/design_Vitis_rst_ps7_0_100M_0.vhd" \
+  "../../../bd/design_Vitis/sim/design_Vitis.vhd" \
+-endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
@@ -67,16 +77,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_Vitis/ip/design_Vitis_auto_pc_0/sim/design_Vitis_auto_pc_0.v" \
--endlib
--makelib xcelium_lib/lib_cdc_v1_0_2 \
-  "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib xcelium_lib/proc_sys_reset_v5_0_13 \
-  "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_Vitis/ip/design_Vitis_rst_ps7_0_100M_0/sim/design_Vitis_rst_ps7_0_100M_0.vhd" \
-  "../../../bd/design_Vitis/sim/design_Vitis.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

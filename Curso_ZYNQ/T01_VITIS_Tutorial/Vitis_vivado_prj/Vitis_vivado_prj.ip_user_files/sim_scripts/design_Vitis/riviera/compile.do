@@ -7,13 +7,13 @@ vlib riviera/xil_defaultlib
 vlib riviera/axi_infrastructure_v1_1_0
 vlib riviera/axi_vip_v1_1_13
 vlib riviera/processing_system7_vip_v1_0_15
+vlib riviera/lib_cdc_v1_0_2
+vlib riviera/proc_sys_reset_v5_0_13
 vlib riviera/generic_baseblocks_v2_1_0
 vlib riviera/fifo_generator_v13_2_7
 vlib riviera/axi_data_fifo_v2_1_26
 vlib riviera/axi_register_slice_v2_1_27
 vlib riviera/axi_protocol_converter_v2_1_27
-vlib riviera/lib_cdc_v1_0_2
-vlib riviera/proc_sys_reset_v5_0_13
 
 vmap xilinx_vip riviera/xilinx_vip
 vmap xpm riviera/xpm
@@ -21,13 +21,13 @@ vmap xil_defaultlib riviera/xil_defaultlib
 vmap axi_infrastructure_v1_1_0 riviera/axi_infrastructure_v1_1_0
 vmap axi_vip_v1_1_13 riviera/axi_vip_v1_1_13
 vmap processing_system7_vip_v1_0_15 riviera/processing_system7_vip_v1_0_15
+vmap lib_cdc_v1_0_2 riviera/lib_cdc_v1_0_2
+vmap proc_sys_reset_v5_0_13 riviera/proc_sys_reset_v5_0_13
 vmap generic_baseblocks_v2_1_0 riviera/generic_baseblocks_v2_1_0
 vmap fifo_generator_v13_2_7 riviera/fifo_generator_v13_2_7
 vmap axi_data_fifo_v2_1_26 riviera/axi_data_fifo_v2_1_26
 vmap axi_register_slice_v2_1_27 riviera/axi_register_slice_v2_1_27
 vmap axi_protocol_converter_v2_1_27 riviera/axi_protocol_converter_v2_1_27
-vmap lib_cdc_v1_0_2 riviera/lib_cdc_v1_0_2
-vmap proc_sys_reset_v5_0_13 riviera/proc_sys_reset_v5_0_13
 
 vlog -work xilinx_vip  -sv2k12 "+incdir+C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -75,6 +75,16 @@ vlog -work processing_system7_vip_v1_0_15  -sv2k12 "+incdir+../../../../Vitis_vi
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ec67/hdl" "+incdir+../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ee60/hdl" "+incdir+C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "../../../bd/design_Vitis/ip/design_Vitis_processing_system7_0_0/sim/design_Vitis_processing_system7_0_0.v" \
 
+vcom -work lib_cdc_v1_0_2 -93  \
+"../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+
+vcom -work proc_sys_reset_v5_0_13 -93  \
+"../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/design_Vitis/ip/design_Vitis_rst_ps7_0_100M_0/sim/design_Vitis_rst_ps7_0_100M_0.vhd" \
+"../../../bd/design_Vitis/sim/design_Vitis.vhd" \
+
 vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ec67/hdl" "+incdir+../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ee60/hdl" "+incdir+C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
@@ -98,16 +108,6 @@ vlog -work axi_protocol_converter_v2_1_27  -v2k5 "+incdir+../../../../Vitis_viva
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ec67/hdl" "+incdir+../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ee60/hdl" "+incdir+C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "../../../bd/design_Vitis/ip/design_Vitis_auto_pc_0/sim/design_Vitis_auto_pc_0.v" \
-
-vcom -work lib_cdc_v1_0_2 -93  \
-"../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
-
-vcom -work proc_sys_reset_v5_0_13 -93  \
-"../../../../Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -93  \
-"../../../bd/design_Vitis/ip/design_Vitis_rst_ps7_0_100M_0/sim/design_Vitis_rst_ps7_0_100M_0.vhd" \
-"../../../bd/design_Vitis/sim/design_Vitis.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

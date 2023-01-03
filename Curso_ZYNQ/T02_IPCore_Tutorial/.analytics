@@ -7,3 +7,6 @@ timestamp=[2022-12-27 21:22:26], mode=BUILD, duration=0:00:04.310, duration_ms=4
 timestamp=[2022-12-27 21:22:33], mode=BUILD, duration=0:00:06.833, duration_ms=6833, data={name=IP_core_Vitis_system, configuration=Debug, clean_build=false}
 timestamp=[2022-12-27 21:24:00], mode=BUILD, duration=0:00:00.622, duration_ms=622, data={name=IP_core_Vitis, configuration=Debug, clean_build=false}
 timestamp=[2022-12-27 21:24:09], mode=BUILD, duration=0:00:00.613, duration_ms=613, data={name=IP_core_Vitis, configuration=Debug, clean_build=false}
+timestamp=[2023-01-02 22:15:23], mode=WORKBENCH_START, duration=0:00:06.653, duration_ms=6653, data={}
+timestamp=[2023-01-02 22:15:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.550, duration_ms=550, data={editors_count=5, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=IP_core_Vitis,IP_core_Vitis_system,RemoteSystemsTempFiles,design_IP_core_wrapper}
+timestamp=[2023-01-02 22:15:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.395, duration_ms=395, data={}

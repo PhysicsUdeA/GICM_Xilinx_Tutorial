@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 -- Date        : Tue Dec 27 17:09:50 2022
 -- Host        : fabiancastano running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T01_VITIS_Tutorial/Vitis_vivado_prj/Vitis_vivado_prj.gen/sources_1/bd/design_Vitis/ip/design_Vitis_auto_pc_0/design_Vitis_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_Vitis_auto_pc_0 -prefix
+--               design_Vitis_auto_pc_0_ design_Vitis_auto_pc_0_stub.vhdl
 -- Design      : design_Vitis_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
