@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 26 11:07:06 2022" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="1" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="table1_0" PORT="A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="F" SIGIS="undef" SIGNAME="table1_0_F">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="table1_0" PORT="F"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="in_1" SIGIS="undef" SIGNAME="External_Ports_in_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="or_gate_0" PORT="in_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="in_2" SIGIS="undef" SIGNAME="External_Ports_in_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="or_gate_0" PORT="in_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="out_1" SIGIS="undef" SIGNAME="or_gate_0_out_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="or_gate_0" PORT="out_1"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/or_gate_0" HWVERSION="1.0" INSTANCE="or_gate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="or_gate" VLNV="xilinx.com:module_ref:or_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_or_gate_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="in_1" SIGIS="undef" SIGNAME="External_Ports_in_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="in_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in_2" SIGIS="undef" SIGNAME="External_Ports_in_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="in_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_1" SIGIS="undef" SIGNAME="or_gate_0_out_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="out_1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/table1_0" HWVERSION="1.0" INSTANCE="table1_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="table1" VLNV="xilinx.com:module_ref:table1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_table1_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="F" SIGIS="undef" SIGNAME="table1_0_F">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="F"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
