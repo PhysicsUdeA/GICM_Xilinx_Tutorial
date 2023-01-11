@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../Led_Vivado_Prj.gen/sources_1/bd/design_Led_Ctrl/ipshared/ec67/hdl" --include "../../../../Led_Vivado_Prj.gen/sources_1/bd/design_Led_Ctrl/ipshared/ee60/hdl" \
+"../../../bd/design_Led_Ctrl/ip/design_Led_Ctrl_processing_system7_0_0/sim/design_Led_Ctrl_processing_system7_0_0.v" \
+"../../../bd/design_Led_Ctrl/ip/design_Led_Ctrl_auto_pc_0/sim/design_Led_Ctrl_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
