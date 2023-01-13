@@ -1,0 +1,510 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>ledsPrj</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.000</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <FF>106</FF>
+            <LUT>168</LUT>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>5</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sw</name>
+            <Object>sw</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>uint</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>led</name>
+            <Object>led</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>ledsPrj</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>ledsPrj</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="1">
+            <ModuleName>ledsPrj</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>ledsPrj</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.000</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>106</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>168</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export description="Leds Control" display_name="LedsPrj" output="C:/GitHub/GICM_Xilinx_Tutorial/PYNQ_Tutorials/T02_Overlay_Combinational/RTL_Leds" vendor="Fabian" version="1.0.2"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="sw" index="0" direction="in" srcType="bool" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="sw" name="sw" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="led_reg" index="1" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="led_reg" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="sw_reg" index="2" direction="out" srcType="int&amp;" srcSize="32">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="sw_reg" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="sw_reg_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="led" index="3" direction="out" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="led" name="led" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="5" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x10" name="led_reg" access="W" description="Data signal of led_reg" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="led_reg" access="W" description="Bit 31 to 0 of led_reg"/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="sw_reg" access="R" description="Data signal of sw_reg" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="sw_reg" access="R" description="Bit 31 to 0 of sw_reg"/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="sw_reg_ctrl" access="R" description="Control signal of sw_reg" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="sw_reg_ap_vld" access="R" description="Control signal sw_reg_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="led_reg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="sw_reg"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="sw" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="sw">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>sw</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="sw"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="led" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="led">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>led</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="led"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 5, 16, 0, , , , , </column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table isCollapsed="0">
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">led_reg, 0x10, 32, W, Data signal of led_reg, </column>
+                    <column name="s_axi_control">sw_reg, 0x18, 32, R, Data signal of sw_reg, </column>
+                    <column name="s_axi_control">sw_reg_ctrl, 0x1c, 32, R, Control signal of sw_reg, 0=sw_reg_ap_vld</column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="led">ap_none, 1, , </column>
+                    <column name="sw">ap_none, 1, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="sw">in, bool</column>
+                    <column name="led_reg">in, int</column>
+                    <column name="sw_reg">out, int&amp;</column>
+                    <column name="led">out, bool&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="sw">sw, port, , </column>
+                    <column name="led_reg">s_axi_control, register, name=led_reg offset=0x10 range=32, </column>
+                    <column name="sw_reg">s_axi_control, register, name=sw_reg offset=0x18 range=32, </column>
+                    <column name="sw_reg">s_axi_control, register, name=sw_reg_ctrl offset=0x1c range=32, </column>
+                    <column name="led">led, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="interface" location="LedsVitis/src/LedsPrj.cpp:6" status="valid" parentFunction="ledsprj" variable="" isDirective="0" options="ap_none port = led"/>
+        <Pragma type="interface" location="LedsVitis/src/LedsPrj.cpp:7" status="valid" parentFunction="ledsprj" variable="" isDirective="0" options="ap_none port = sw"/>
+        <Pragma type="interface" location="LedsVitis/src/LedsPrj.cpp:8" status="valid" parentFunction="ledsprj" variable="" isDirective="0" options="s_axilite port = sw_reg"/>
+        <Pragma type="interface" location="LedsVitis/src/LedsPrj.cpp:9" status="valid" parentFunction="ledsprj" variable="" isDirective="0" options="s_axilite port = led_reg"/>
+        <Pragma type="interface" location="LedsVitis/src/LedsPrj.cpp:10" status="valid" parentFunction="ledsprj" variable="" isDirective="0" options="ap_ctrl_none port = return"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="LedsVitis/src/LedsPrj.cpp" line="6" pragmaType="interface" parentfunction="ledsPrj" mode="ap_none" port="led" name="" register="0"/>
+<pragma file="LedsVitis/src/LedsPrj.cpp" line="7" pragmaType="interface" parentfunction="ledsPrj" mode="ap_none" port="sw" name="" register="0"/>
+<pragma file="LedsVitis/src/LedsPrj.cpp" line="8" pragmaType="interface" parentfunction="ledsPrj" mode="s_axilite" port="sw_reg" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="LedsVitis/src/LedsPrj.cpp" line="9" pragmaType="interface" parentfunction="ledsPrj" mode="s_axilite" port="led_reg" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="LedsVitis/src/LedsPrj.cpp" line="10" pragmaType="interface" parentfunction="ledsPrj" mode="ap_ctrl_none" port="return" name=""/>
+</pragmas>
