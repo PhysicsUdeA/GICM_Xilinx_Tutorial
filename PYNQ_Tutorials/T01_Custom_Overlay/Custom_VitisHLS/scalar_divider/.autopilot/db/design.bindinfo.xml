@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op sdiv" ID="" IMPL="auto_seq" LATENCY="35" OPTYPE="sdiv" PRAGMA="" RTLNAME="sdiv_32ns_32ns_32_36_seq_1_U1" SOURCE="Custom_VitisHLS/src/divide.cpp:8" VARIABLE="sdiv_ln8" MODULE="divide" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="control_s_axi_U" SOURCE="" VARIABLE="" MODULE="divide" LOOP="" BUNDLEDNAME="control" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>
