@@ -1,0 +1,3 @@
+[submodule "DeepLearning_FPGA"]
+	path = DeepLearning_FPGA
+	url = https://github.com/fabioc9675/DeepLearning_FPGA.git
