@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/GitHub/GICM_Xilinx_Tutorial/PYNQ_Tutorials/T02_Overlay_Combinational/LedsVitis/LedsVitis/csynth.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ledsPrj" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ledsPrj" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="LedsVitis/src/LedsPrj.cpp:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ledsPrj" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = led" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="LedsVitis/src/LedsPrj.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ledsPrj" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = sw" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="LedsVitis/src/LedsPrj.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ledsPrj" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = sw_reg" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="LedsVitis/src/LedsPrj.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ledsPrj" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = led_reg" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="LedsVitis/src/LedsPrj.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ledsPrj" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,9 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../Interrupt_Prj.gen/sources_1/bd/design_Interrupt/ipshared/ec67/hdl" --include "../../../../Interrupt_Prj.gen/sources_1/bd/design_Interrupt/ipshared/ee60/hdl" \
+"../../../bd/design_Interrupt/ip/design_Interrupt_processing_system7_0_0/sim/design_Interrupt_processing_system7_0_0.v" \
+"../../../bd/design_Interrupt/ip/design_Interrupt_xlconcat_0_0/sim/design_Interrupt_xlconcat_0_0.v" \
+"../../../bd/design_Interrupt/ip/design_Interrupt_xbar_0/sim/design_Interrupt_xbar_0.v" \
+"../../../bd/design_Interrupt/ip/design_Interrupt_auto_pc_0/sim/design_Interrupt_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Vitis_XADC" location="C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T01_VITIS_Tutorial/Vitis_XADC" platform="C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T01_VITIS_Tutorial/design_Vitis_wrapper/export/design_Vitis_wrapper/design_Vitis_wrapper.xpfm" platformUID="xilinx:pynq-z1::0.0(custom)" systemProject="Vitis_XADC_system" sysConfig="design_Vitis_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="067d3579b79501028342d1e1d56ca22a">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.226702758">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1122702684" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

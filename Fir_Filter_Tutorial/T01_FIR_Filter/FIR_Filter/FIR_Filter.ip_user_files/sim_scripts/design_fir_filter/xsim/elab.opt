@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto  -L xil_defaultlib -L xilinx_vip -L secureip -L xpm --snapshot design_fir_filter xil_defaultlib.design_fir_filter -log elaborate.log

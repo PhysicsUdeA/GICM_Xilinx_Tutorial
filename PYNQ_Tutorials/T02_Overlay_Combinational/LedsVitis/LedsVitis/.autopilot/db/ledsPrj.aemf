@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1673578776258">
+  <ports id="1" name="sw" type="PortType" originalName="sw" coreId="1702129263" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="led_reg" type="PortType" originalName="led_reg" coreId="1702129263" bitwidth="32"/>
+  <ports id="3" name="sw_reg" type="PortType" originalName="sw_reg" coreId="1702129263" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="led" type="PortType" originalName="led" coreId="1702129263" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="25" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.2"/>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="33" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.3"/>
+  <edges id="34" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <blocks id="22" name="ledsPrj" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="sw_read" lineNumber="1" originalName="sw" fileName="LedsVitis/src/LedsPrj.cpp" fileDirectory=".." coreId="1851877408" contextFuncName="ledsPrj" bitwidth="1" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="LedsVitis/src/LedsPrj.cpp" linenumber="1" fileDirectory="C:\GitHub\GICM_Xilinx_Tutorial\PYNQ_Tutorials\T02_Overlay_Combinational" functionName="ledsPrj"/>
+      <dataInputObjs>sw</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln12" lineNumber="12" fileName="LedsVitis/src/LedsPrj.cpp" fileDirectory=".." rtlName="sw_reg" coreId="0" contextFuncName="ledsPrj" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="LedsVitis/src/LedsPrj.cpp" linenumber="12" fileDirectory="C:\GitHub\GICM_Xilinx_Tutorial\PYNQ_Tutorials\T02_Overlay_Combinational" functionName="ledsPrj"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="sw_reg_write_ln12" lineNumber="12" fileName="LedsVitis/src/LedsPrj.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ledsPrj" opcode="write" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="LedsVitis/src/LedsPrj.cpp" linenumber="12" fileDirectory="C:\GitHub\GICM_Xilinx_Tutorial\PYNQ_Tutorials\T02_Overlay_Combinational" functionName="ledsPrj"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>sw_reg</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="led_write_ln14" lineNumber="14" fileName="LedsVitis/src/LedsPrj.cpp" fileDirectory=".." coreId="1634755954" contextFuncName="ledsPrj" opcode="write" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="LedsVitis/src/LedsPrj.cpp" linenumber="14" fileDirectory="C:\GitHub\GICM_Xilinx_Tutorial\PYNQ_Tutorials\T02_Overlay_Combinational" functionName="ledsPrj"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>led</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln16" lineNumber="16" fileName="LedsVitis/src/LedsPrj.cpp" fileDirectory=".." coreId="1818194017" contextFuncName="ledsPrj" opcode="ret" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="LedsVitis/src/LedsPrj.cpp" linenumber="16" fileDirectory="C:\GitHub\GICM_Xilinx_Tutorial\PYNQ_Tutorials\T02_Overlay_Combinational" functionName="ledsPrj"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="LedsVitis/src/LedsPrj.cpp">
+      <validLinenumbers>1</validLinenumbers>
+      <validLinenumbers>12</validLinenumbers>
+      <validLinenumbers>14</validLinenumbers>
+      <validLinenumbers>16</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="zext_ln12_fu_63">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="write_ln14_write_fu_55">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sw_read_read_fu_42">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln12_write_fu_48">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioPorts name="led">
+    <contents name="write">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="led_reg"/>
+  <ioPorts name="sw">
+    <contents name="read">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="sw_reg">
+    <contents name="write">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="ledsPrj" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>22</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

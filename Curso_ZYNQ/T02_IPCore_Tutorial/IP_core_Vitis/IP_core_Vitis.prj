@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="IP_core_Vitis" location="C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T02_IPCore_Tutorial/IP_core_Vitis" platform="C:/GitHub/GICM_Xilinx_Tutorial/Curso_ZYNQ/T02_IPCore_Tutorial/design_IP_core_wrapper/export/design_IP_core_wrapper/design_IP_core_wrapper.xpfm" platformUID="xilinx:pynq-z1::0.0(custom)" systemProject="IP_core_Vitis_system" sysConfig="design_IP_core_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="1d28fcb31555a505fd36268974b9b5ef">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1842542066">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.163549289" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

@@ -1,0 +1,114 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF8A8A13EF8A8A13E",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../HelloWorld.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "or_gate_0": "",
+      "table1_0": ""
+    },
+    "ports": {
+      "A": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "F": {
+        "direction": "O"
+      },
+      "in_1": {
+        "direction": "I"
+      },
+      "in_2": {
+        "direction": "I"
+      },
+      "out_1": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "or_gate_0": {
+        "vlnv": "xilinx.com:module_ref:or_gate:1.0",
+        "xci_name": "design_1_or_gate_0_0",
+        "xci_path": "ip\\design_1_or_gate_0_0\\design_1_or_gate_0_0.xci",
+        "inst_hier_path": "or_gate_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "or_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in_1": {
+            "direction": "I"
+          },
+          "in_2": {
+            "direction": "I"
+          },
+          "out_1": {
+            "direction": "O"
+          }
+        }
+      },
+      "table1_0": {
+        "vlnv": "xilinx.com:module_ref:table1:1.0",
+        "xci_name": "design_1_table1_0_0",
+        "xci_path": "ip\\design_1_table1_0_0\\design_1_table1_0_0.xci",
+        "inst_hier_path": "table1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "table1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "F": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "A_0_1": {
+        "ports": [
+          "A",
+          "table1_0/A"
+        ]
+      },
+      "in_1_0_1": {
+        "ports": [
+          "in_1",
+          "or_gate_0/in_1"
+        ]
+      },
+      "in_2_0_1": {
+        "ports": [
+          "in_2",
+          "or_gate_0/in_2"
+        ]
+      },
+      "or_gate_0_out_1": {
+        "ports": [
+          "or_gate_0/out_1",
+          "out_1"
+        ]
+      },
+      "table1_0_F": {
+        "ports": [
+          "table1_0/F",
+          "F"
+        ]
+      }
+    }
+  }
+}

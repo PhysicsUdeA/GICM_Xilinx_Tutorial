@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../IPCore_Prj.gen/sources_1/bd/design_IP/ipshared/ec67/hdl" --include "../../../../IPCore_Prj.gen/sources_1/bd/design_IP/ipshared/ee60/hdl" \
+"../../../bd/design_IP/ip/design_IP_processing_system7_0_0/sim/design_IP_processing_system7_0_0.v" \
+"../../../bd/design_IP/ip/design_IP_xbar_0/sim/design_IP_xbar_0.v" \
+"../../../bd/design_IP/ip/design_IP_auto_pc_0/sim/design_IP_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
