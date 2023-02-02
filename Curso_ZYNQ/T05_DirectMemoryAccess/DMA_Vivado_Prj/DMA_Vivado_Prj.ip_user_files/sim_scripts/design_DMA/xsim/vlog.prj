@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../DMA_Vivado_Prj.gen/sources_1/bd/design_DMA/ipshared/ec67/hdl" --include "../../../../DMA_Vivado_Prj.gen/sources_1/bd/design_DMA/ipshared/5765/hdl" \
+"../../../bd/design_DMA/ip/design_DMA_processing_system7_0_0/sim/design_DMA_processing_system7_0_0.v" \
+"../../../bd/design_DMA/ip/design_DMA_auto_pc_0/sim/design_DMA_auto_pc_0.v" \
+"../../../bd/design_DMA/ip/design_DMA_xbar_0/sim/design_DMA_xbar_0.v" \
+"../../../bd/design_DMA/ip/design_DMA_auto_us_0/sim/design_DMA_auto_us_0.v" \
+"../../../bd/design_DMA/ip/design_DMA_auto_us_1/sim/design_DMA_auto_us_1.v" \
+"../../../bd/design_DMA/ip/design_DMA_auto_pc_1/sim/design_DMA_auto_pc_1.v" \
+"../../../bd/design_DMA/ip/design_DMA_xlconcat_0_0/sim/design_DMA_xlconcat_0_0.v" \
+"../../../bd/design_DMA/sim/design_DMA.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
