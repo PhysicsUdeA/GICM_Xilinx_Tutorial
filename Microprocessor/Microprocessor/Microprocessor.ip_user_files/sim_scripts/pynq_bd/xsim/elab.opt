@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto  -L xil_defaultlib -L secureip -L xpm --snapshot pynq_bd xil_defaultlib.pynq_bd -log elaborate.log

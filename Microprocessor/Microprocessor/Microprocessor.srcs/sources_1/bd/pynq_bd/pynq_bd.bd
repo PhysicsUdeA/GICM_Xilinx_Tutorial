@@ -1,13 +1,789 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x4AB1C262AACA4C41",
+      "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Microprocessor.gen/sources_1/bd/pynq_bd",
       "name": "pynq_bd",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2"
+      "synth_flow_mode": "None",
+      "tool_version": "2022.2",
+      "validated": "true"
     },
-    "design_tree": {}
+    "design_tree": {
+      "easy_counter_0": "",
+      "alu_0": "",
+      "rega5_0": "",
+      "regb5_0": "",
+      "selDataRegister_0": "",
+      "triState_0": "",
+      "ProgramCounter_0": "",
+      "stack_0": "",
+      "indice_0": "",
+      "selDirRegister_0": "",
+      "control_0": "",
+      "dirValRegister_0": ""
+    },
+    "ports": {
+      "sysclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset_rtl",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "pynq_bd_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "led": {
+        "direction": "IO"
+      },
+      "irq": {
+        "type": "intr",
+        "direction": "I",
+        "left": "1",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "2"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset_rtl": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "rw_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "easy_counter_0": {
+        "vlnv": "xilinx.com:module_ref:easy_counter:1.0",
+        "xci_name": "pynq_bd_easy_counter_0_0",
+        "xci_path": "ip\\pynq_bd_easy_counter_0_0\\pynq_bd_easy_counter_0_0.xci",
+        "inst_hier_path": "easy_counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "easy_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pout": {
+            "direction": "IO"
+          }
+        }
+      },
+      "alu_0": {
+        "vlnv": "xilinx.com:module_ref:alu:1.0",
+        "xci_name": "pynq_bd_alu_0_0",
+        "xci_path": "ip\\pynq_bd_alu_0_0\\pynq_bd_alu_0_0.xci",
+        "inst_hier_path": "alu_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "alu",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "a": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "oper": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "re": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "rega5_0": {
+        "vlnv": "xilinx.com:module_ref:rega5:1.0",
+        "xci_name": "pynq_bd_rega5_0_0",
+        "xci_path": "ip\\pynq_bd_rega5_0_0\\pynq_bd_rega5_0_0.xci",
+        "inst_hier_path": "rega5_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rega5",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "datain": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "a": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "regb5_0": {
+        "vlnv": "xilinx.com:module_ref:regb5:1.0",
+        "xci_name": "pynq_bd_regb5_0_0",
+        "xci_path": "ip\\pynq_bd_regb5_0_0\\pynq_bd_regb5_0_0.xci",
+        "inst_hier_path": "regb5_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "regb5",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "datain": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "b": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "selDataRegister_0": {
+        "vlnv": "xilinx.com:module_ref:selDataRegister:1.0",
+        "xci_name": "pynq_bd_selDataRegister_0_0",
+        "xci_path": "ip\\pynq_bd_selDataRegister_0_0\\pynq_bd_selDataRegister_0_0.xci",
+        "inst_hier_path": "selDataRegister_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "selDataRegister",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "dataout": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "datain": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "oper": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "triState_0": {
+        "vlnv": "xilinx.com:module_ref:triState:1.0",
+        "xci_name": "pynq_bd_triState_0_0",
+        "xci_path": "ip\\pynq_bd_triState_0_0\\pynq_bd_triState_0_0.xci",
+        "inst_hier_path": "triState_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "triState",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "oper": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "dataout": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "ProgramCounter_0": {
+        "vlnv": "xilinx.com:module_ref:ProgramCounter:1.0",
+        "xci_name": "pynq_bd_ProgramCounter_0_0",
+        "xci_path": "ip\\pynq_bd_ProgramCounter_0_0\\pynq_bd_ProgramCounter_0_0.xci",
+        "inst_hier_path": "ProgramCounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ProgramCounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pcontrol": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "pila": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pcout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "stack_0": {
+        "vlnv": "xilinx.com:module_ref:stack:1.0",
+        "xci_name": "pynq_bd_stack_0_0",
+        "xci_path": "ip\\pynq_bd_stack_0_0\\pynq_bd_stack_0_0.xci",
+        "inst_hier_path": "stack_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "stack",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pcout": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "pila": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "indice_0": {
+        "vlnv": "xilinx.com:module_ref:indice:1.0",
+        "xci_name": "pynq_bd_indice_0_0",
+        "xci_path": "ip\\pynq_bd_indice_0_0\\pynq_bd_indice_0_0.xci",
+        "inst_hier_path": "indice_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "indice",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pcontrol": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "ix": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "selDirRegister_0": {
+        "vlnv": "xilinx.com:module_ref:selDirRegister:1.0",
+        "xci_name": "pynq_bd_selDirRegister_0_0",
+        "xci_path": "ip\\pynq_bd_selDirRegister_0_0\\pynq_bd_selDirRegister_0_0.xci",
+        "inst_hier_path": "selDirRegister_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "selDirRegister",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pcout": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ix": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "dir": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "control_0": {
+        "vlnv": "xilinx.com:module_ref:control:1.0",
+        "xci_name": "pynq_bd_control_0_0",
+        "xci_path": "ip\\pynq_bd_control_0_0\\pynq_bd_control_0_0.xci",
+        "inst_hier_path": "control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pynq_bd_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "irq": {
+            "type": "intr",
+            "direction": "I",
+            "left": "1",
+            "right": "0",
+            "parameters": {
+              "SENSITIVITY": {
+                "value": "LEVEL_HIGH",
+                "value_src": "constant"
+              },
+              "PortWidth": {
+                "value": "2",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rw": {
+            "direction": "O"
+          },
+          "datain": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "pcontrol": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "re": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "pcout": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "cs": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "dirValRegister_0": {
+        "vlnv": "xilinx.com:module_ref:dirValRegister:1.0",
+        "xci_name": "pynq_bd_dirValRegister_0_0",
+        "xci_path": "ip\\pynq_bd_dirValRegister_0_0\\pynq_bd_dirValRegister_0_0.xci",
+        "inst_hier_path": "dirValRegister_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dirValRegister",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "vma": {
+            "direction": "O"
+          },
+          "cs": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "led",
+          "easy_counter_0/pout"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "control_0/cs",
+          "alu_0/cs",
+          "selDataRegister_0/cs",
+          "selDirRegister_0/cs",
+          "triState_0/cs",
+          "ProgramCounter_0/cs",
+          "indice_0/cs",
+          "rega5_0/cs",
+          "regb5_0/cs",
+          "stack_0/cs",
+          "dirValRegister_0/cs"
+        ]
+      },
+      "ProgramCounter_0_pcout": {
+        "ports": [
+          "ProgramCounter_0/pcout",
+          "stack_0/pcout",
+          "selDirRegister_0/pcout",
+          "control_0/pcout"
+        ]
+      },
+      "alu_0_oper": {
+        "ports": [
+          "alu_0/oper",
+          "selDataRegister_0/oper",
+          "triState_0/oper"
+        ]
+      },
+      "alu_0_re": {
+        "ports": [
+          "alu_0/re",
+          "control_0/re"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "sysclk",
+          "easy_counter_0/clk",
+          "alu_0/clk",
+          "control_0/clk",
+          "indice_0/clk",
+          "ProgramCounter_0/clk",
+          "rega5_0/clk",
+          "regb5_0/clk",
+          "selDataRegister_0/clk",
+          "selDirRegister_0/clk",
+          "stack_0/clk",
+          "triState_0/clk"
+        ]
+      },
+      "control_0_pcontrol": {
+        "ports": [
+          "control_0/pcontrol",
+          "ProgramCounter_0/pcontrol",
+          "indice_0/pcontrol"
+        ]
+      },
+      "control_0_rw": {
+        "ports": [
+          "control_0/rw",
+          "rw_0"
+        ]
+      },
+      "indice_0_ix": {
+        "ports": [
+          "indice_0/ix",
+          "selDirRegister_0/ix"
+        ]
+      },
+      "irq_0_1": {
+        "ports": [
+          "irq",
+          "control_0/irq"
+        ]
+      },
+      "rega5_0_a": {
+        "ports": [
+          "rega5_0/a",
+          "alu_0/a"
+        ]
+      },
+      "regb5_0_b": {
+        "ports": [
+          "regb5_0/b",
+          "alu_0/b"
+        ]
+      },
+      "rst_sysclk_100M_peripheral_aresetn": {
+        "ports": [
+          "reset_rtl",
+          "control_0/rst",
+          "indice_0/rst",
+          "ProgramCounter_0/rst",
+          "rega5_0/rst",
+          "regb5_0/rst",
+          "stack_0/rst"
+        ]
+      },
+      "selDataRegister_0_datain": {
+        "ports": [
+          "selDataRegister_0/datain",
+          "rega5_0/datain",
+          "regb5_0/datain",
+          "control_0/datain"
+        ]
+      },
+      "stack_0_pila": {
+        "ports": [
+          "stack_0/pila",
+          "ProgramCounter_0/pila"
+        ]
+      },
+      "triState_0_dataout": {
+        "ports": [
+          "triState_0/dataout",
+          "selDataRegister_0/dataout"
+        ]
+      }
+    }
   }
 }

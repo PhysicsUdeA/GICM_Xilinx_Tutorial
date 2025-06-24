@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 25 21:24:10 2024" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="www.digilentinc.com:pynq-z1:part0:1.0" DEVICE="7z020" NAME="pynq_bd" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sysclk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="easy_counter_0" PORT="clk"/>
+        <CONNECTION INSTANCE="alu_0" PORT="clk"/>
+        <CONNECTION INSTANCE="control_0" PORT="clk"/>
+        <CONNECTION INSTANCE="indice_0" PORT="clk"/>
+        <CONNECTION INSTANCE="ProgramCounter_0" PORT="clk"/>
+        <CONNECTION INSTANCE="rega5_0" PORT="clk"/>
+        <CONNECTION INSTANCE="regb5_0" PORT="clk"/>
+        <CONNECTION INSTANCE="selDataRegister_0" PORT="clk"/>
+        <CONNECTION INSTANCE="selDirRegister_0" PORT="clk"/>
+        <CONNECTION INSTANCE="stack_0" PORT="clk"/>
+        <CONNECTION INSTANCE="triState_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="led" SIGIS="undef" SIGNAME="External_Ports_led">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="easy_counter_0" PORT="pout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="irq" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="External_Ports_irq">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="control_0" PORT="irq"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_rtl" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="control_0" PORT="rst"/>
+        <CONNECTION INSTANCE="indice_0" PORT="rst"/>
+        <CONNECTION INSTANCE="ProgramCounter_0" PORT="rst"/>
+        <CONNECTION INSTANCE="rega5_0" PORT="rst"/>
+        <CONNECTION INSTANCE="regb5_0" PORT="rst"/>
+        <CONNECTION INSTANCE="stack_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="rw_0" SIGIS="undef" SIGNAME="control_0_rw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="control_0" PORT="rw"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ProgramCounter_0" HWVERSION="1.0" INSTANCE="ProgramCounter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ProgramCounter" VLNV="xilinx.com:module_ref:ProgramCounter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_ProgramCounter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="pcontrol" RIGHT="0" SIGIS="undef" SIGNAME="control_0_pcontrol">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="pcontrol"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="pila" RIGHT="0" SIGIS="undef" SIGNAME="stack_0_pila">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stack_0" PORT="pila"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="pcout" RIGHT="0" SIGIS="undef" SIGNAME="ProgramCounter_0_pcout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stack_0" PORT="pcout"/>
+            <CONNECTION INSTANCE="selDirRegister_0" PORT="pcout"/>
+            <CONNECTION INSTANCE="control_0" PORT="pcout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/alu_0" HWVERSION="1.0" INSTANCE="alu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="alu" VLNV="xilinx.com:module_ref:alu:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_alu_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="rega5_0_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rega5_0" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="regb5_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regb5_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="oper" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_oper">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selDataRegister_0" PORT="oper"/>
+            <CONNECTION INSTANCE="triState_0" PORT="oper"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="re" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_re">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="re"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/control_0" HWVERSION="1.0" INSTANCE="control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="control" VLNV="xilinx.com:module_ref:control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="irq" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="External_Ports_irq">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="irq"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rw" SIGIS="undef" SIGNAME="control_0_rw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rw_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="datain" RIGHT="0" SIGIS="undef" SIGNAME="selDataRegister_0_datain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selDataRegister_0" PORT="datain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="pcontrol" RIGHT="0" SIGIS="undef" SIGNAME="control_0_pcontrol">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ProgramCounter_0" PORT="pcontrol"/>
+            <CONNECTION INSTANCE="indice_0" PORT="pcontrol"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="re" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_re">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="re"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="pcout" RIGHT="0" SIGIS="undef" SIGNAME="ProgramCounter_0_pcout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ProgramCounter_0" PORT="pcout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="cs"/>
+            <CONNECTION INSTANCE="selDataRegister_0" PORT="cs"/>
+            <CONNECTION INSTANCE="selDirRegister_0" PORT="cs"/>
+            <CONNECTION INSTANCE="triState_0" PORT="cs"/>
+            <CONNECTION INSTANCE="ProgramCounter_0" PORT="cs"/>
+            <CONNECTION INSTANCE="indice_0" PORT="cs"/>
+            <CONNECTION INSTANCE="rega5_0" PORT="cs"/>
+            <CONNECTION INSTANCE="regb5_0" PORT="cs"/>
+            <CONNECTION INSTANCE="stack_0" PORT="cs"/>
+            <CONNECTION INSTANCE="dirValRegister_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/dirValRegister_0" HWVERSION="1.0" INSTANCE="dirValRegister_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dirValRegister" VLNV="xilinx.com:module_ref:dirValRegister:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_dirValRegister_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="vma" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/easy_counter_0" HWVERSION="1.0" INSTANCE="easy_counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="easy_counter" VLNV="xilinx.com:module_ref:easy_counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_easy_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" NAME="pout" SIGIS="undef" SIGNAME="External_Ports_led">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/indice_0" HWVERSION="1.0" INSTANCE="indice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="indice" VLNV="xilinx.com:module_ref:indice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_indice_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="pcontrol" RIGHT="0" SIGIS="undef" SIGNAME="control_0_pcontrol">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="pcontrol"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="ix" RIGHT="0" SIGIS="undef" SIGNAME="indice_0_ix">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selDirRegister_0" PORT="ix"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/rega5_0" HWVERSION="1.0" INSTANCE="rega5_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rega5" VLNV="xilinx.com:module_ref:rega5:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_rega5_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="datain" RIGHT="0" SIGIS="undef" SIGNAME="selDataRegister_0_datain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selDataRegister_0" PORT="datain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="a" RIGHT="0" SIGIS="undef" SIGNAME="rega5_0_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/regb5_0" HWVERSION="1.0" INSTANCE="regb5_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="regb5" VLNV="xilinx.com:module_ref:regb5:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_regb5_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="datain" RIGHT="0" SIGIS="undef" SIGNAME="selDataRegister_0_datain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selDataRegister_0" PORT="datain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="regb5_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/selDataRegister_0" HWVERSION="1.0" INSTANCE="selDataRegister_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="selDataRegister" VLNV="xilinx.com:module_ref:selDataRegister:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_selDataRegister_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="dataout" RIGHT="0" SIGIS="undef" SIGNAME="triState_0_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="triState_0" PORT="dataout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="datain" RIGHT="0" SIGIS="undef" SIGNAME="selDataRegister_0_datain">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rega5_0" PORT="datain"/>
+            <CONNECTION INSTANCE="regb5_0" PORT="datain"/>
+            <CONNECTION INSTANCE="control_0" PORT="datain"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="oper" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_oper">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="oper"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/selDirRegister_0" HWVERSION="1.0" INSTANCE="selDirRegister_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="selDirRegister" VLNV="xilinx.com:module_ref:selDirRegister:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_selDirRegister_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="pcout" RIGHT="0" SIGIS="undef" SIGNAME="ProgramCounter_0_pcout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ProgramCounter_0" PORT="pcout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="ix" RIGHT="0" SIGIS="undef" SIGNAME="indice_0_ix">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="indice_0" PORT="ix"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="dir" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/stack_0" HWVERSION="1.0" INSTANCE="stack_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stack" VLNV="xilinx.com:module_ref:stack:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_stack_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="pcout" RIGHT="0" SIGIS="undef" SIGNAME="ProgramCounter_0_pcout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ProgramCounter_0" PORT="pcout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="pila" RIGHT="0" SIGIS="undef" SIGNAME="stack_0_pila">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ProgramCounter_0" PORT="pila"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/triState_0" HWVERSION="1.0" INSTANCE="triState_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="triState" VLNV="xilinx.com:module_ref:triState:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pynq_bd_triState_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="oper" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_oper">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="oper"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="control_0_cs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_0" PORT="cs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="dataout" RIGHT="0" SIGIS="undef" SIGNAME="triState_0_dataout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="selDataRegister_0" PORT="dataout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
